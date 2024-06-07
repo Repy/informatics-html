@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン1</title>
+  <style>
+    div.exp {
+      display: flex;
+      align-items: stretch;
+      margin: 20px 0;
+      min-height: 300px;
+    }
+
+    textarea {
+      flex: 1;
+      display: block;
+      border: 3px solid black;
+    }
+
+    div.block {
+      flex: 1;
+      border: 3px solid black;
+    }
+  </style>
+</head>
+
+
+<h2>上から下に順番に並ぶ</h2>
+<div class="exp">
+  <textarea>
+<h1>H1</h1>
+<div>DIV</div>
+<h1>H2</h1>
+<div>DIV</div>
+</textarea>
+  <div class="block">
+    <h1>H1</h1>
+    <div>DIV</div>
+    <h1>H2</h1>
+    <div>DIV</div>
+  </div>
+</div>
+
+<h2>文字と一緒に左右に並ぶ</h2>
+<div class="exp">
+  <textarea>
+文字
+<a href="https://line.me/">A</a>
+文字
+<button>BUTTON</button>
+文字
+<img src="https://plchldr.co/i/50x50">
+文字        
+</textarea>
+  <div class="block">
+    文字
+    <a href="https://line.me/">A</a>
+    文字
+    <button>BUTTON</button>
+    文字
+    <img src="https://plchldr.co/i/50x50">
+    文字
+  </div>
+</div>
+
+<h2>block要素とinline要素は同一階層で混在させない</h2>
+<div class="exp">
+  <textarea>
+<style>
+div{
+    margin: 10px;
+    border: 1px solid black;
+}
+</style>
+<div><!-- ここはblock要素を並べた -->
+<div><!-- ここはblock要素を並べた -->
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+</div>
+<div><!-- ここはinline要素を並べた -->
+    文字
+    <button>BUTTON</button>
+    文字
+</div>
+<div>DIV</div>
+</div>              
+</textarea>
+  <div class="block" id="b3">
+    <style>
+      #b3 div {
+        margin: 10px;
+        border: 1px solid black;
+      }
+    </style>
+    <div><!-- ここはblock要素を並べた -->
+      <div><!-- ここはblock要素を並べた -->
+        <div>DIV</div>
+        <div>DIV</div>
+        <div>DIV</div>
+      </div>
+      <div><!-- ここはinline要素を並べた -->
+        文字
+        <button>BUTTON</button>
+        文字
+      </div>
+      <div>DIV</div>
+    </div>
+  </div>
+</div>
