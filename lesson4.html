@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>レッスン4</title>
+  <style>
+    div.exp {
+      display: flex;
+      align-items: stretch;
+      margin: 20px 0;
+      min-height: 300px;
+    }
+
+    textarea {
+      flex: 1;
+      display: block;
+      border: 3px solid black;
+    }
+
+    div.block {
+      flex: 1;
+      border: 3px solid black;
+      position: relative;
+    }
+  </style>
+</head>
+
+<h2>セレクタ :hover</h2>
+<div class="exp">
+  <textarea>
+    <style>
+      div.aaa {
+          background-color: red;
+      }
+      diva.aa:hover {
+          background-color: blue;
+      }
+  </style>
+  <div class="aaa">DIV要素</div>
+</textarea>
+  <div class="block">
+    <style>
+      div.aaa {
+        background-color: red;
+      }
+
+      diva.aa:hover {
+        background-color: blue;
+      }
+    </style>
+    <div class="aaa">DIV要素</div>
+  </div>
+</div>
+
+<h2>CSSトランジションと:hoverの併用</h2>
+<div class="exp">
+  <textarea>
+  <style>
+    div.bbb {
+      background-color: red;
+      transition: 1s background-color;
+    }
+    div.aa:hover {
+      background-color: blue;
+    }
+  </style>
+  <div class="bbb">DIV要素</div>
+</textarea>
+  <div class="block">
+    <style>
+      div.bbb {
+        background-color: red;
+        transition: 1s background-color;
+      }
+      div.aa:hover {
+        background-color: blue;
+      }
+    </style>
+    <div class="bbb">DIV要素</div>    
+  </div>
+</div>
+
